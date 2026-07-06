@@ -1,26 +1,851 @@
 @import "tailwindcss";
 
+/* =========================================================
+   YatraPass Design System v2
+   Core Tokens + Base
+========================================================= */
+
 :root {
+  /* Colors */
+
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0f172a;
+
+  --primary: #2563eb;
+  --primary-light: #60a5fa;
+  --primary-dark: #1d4ed8;
+
+  --secondary: #eff6ff;
+
+  --muted: #64748b;
+
+  --border: #e2e8f0;
+
+  /* Glass */
+
+  --glass-bg: rgba(255, 255, 255, 0.72);
+  --glass-bg-strong: rgba(255, 255, 255, 0.82);
+
+  --glass-border: rgba(255, 255, 255, 0.42);
+
+  /* Shadows */
+
+  --shadow-xs: 0 4px 12px rgba(15, 23, 42, 0.04);
+
+  --shadow-sm: 0 12px 30px rgba(15, 23, 42, 0.06);
+
+  --shadow-md: 0 24px 60px rgba(15, 23, 42, 0.08);
+
+  --shadow-lg: 0 40px 90px rgba(37, 99, 235, 0.14);
+
+  /* Radius */
+
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 28px;
+
+  /* Transition */
+
+  --transition:
+    cubic-bezier(.22,.61,.36,1);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* =========================================================
+   Reset
+========================================================= */
+
+*,
+*::before,
+*::after{
+  box-sizing:border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+
+  overflow-x:hidden;
+
+  background:var(--background);
+
+  color:var(--foreground);
+
+  font-family:var(--font-inter),sans-serif;
+
+  text-rendering:optimizeLegibility;
+
+  -webkit-font-smoothing:antialiased;
+
+  -moz-osx-font-smoothing:grayscale;
+}
+
+img{
+  display:block;
+
+  max-width:100%;
+
+  user-select:none;
+
+  -webkit-user-drag:none;
+}
+
+button{
+  cursor:pointer;
+
+  font:inherit;
+}
+
+input,
+textarea,
+select{
+  font:inherit;
+}
+
+a{
+  color:inherit;
+
+  text-decoration:none;
+}
+
+/* =========================================================
+   Typography
+========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+
+  margin:0;
+
+  font-family:var(--font-poppins),sans-serif;
+
+  line-height:1.05;
+
+  letter-spacing:-0.03em;
+
+  color:var(--foreground);
+}
+
+p{
+
+  margin:0;
+
+  line-height:1.75;
+
+  color:var(--muted);
+}
+
+/* =========================================================
+   Selection
+========================================================= */
+
+::selection{
+
+  background:var(--primary);
+
+  color:white;
+
+}
+
+/* =========================================================
+   Scrollbar
+========================================================= */
+
+::-webkit-scrollbar{
+  width:10px;
+}
+
+::-webkit-scrollbar-track{
+  background:#f8fafc;
+}
+
+::-webkit-scrollbar-thumb{
+
+  background:#cbd5e1;
+
+  border-radius:999px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+  background:#94a3b8;
+
+}
+
+/* =========================================================
+   Motion Engine
+========================================================= */
+
+/* -----------------------------
+   Bus Float
+----------------------------- */
+
+@keyframes busFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0.15deg);
+  }
+
+  25% {
+    transform: translateY(-4px) rotate(-0.15deg);
+  }
+
+  50% {
+    transform: translateY(-9px) rotate(0.2deg);
+  }
+
+  75% {
+    transform: translateY(-5px) rotate(-0.1deg);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* -----------------------------
+   Floating Cards
+----------------------------- */
+
+@keyframes cardFloatOne {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-18px);
+  }
+}
+
+@keyframes cardFloatTwo {
+  0%,
+  100% {
+    transform: translateY(-8px);
+  }
+
+  50% {
+    transform: translateY(12px);
+  }
+}
+
+@keyframes cardFloatThree {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-14px) rotate(1deg);
+  }
+}
+
+/* -----------------------------
+   Ambient Glow
+----------------------------- */
+
+@keyframes glowBreath {
+  0%,
+  100% {
+    opacity: .45;
+    filter: blur(90px);
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: .82;
+    filter: blur(125px);
+    transform: scale(1.05);
+  }
+}
+
+/* -----------------------------
+   Hero Radar
+----------------------------- */
+
+@keyframes radarPulse {
+  0% {
+    transform: translate(-50%, -50%) scale(.92);
+    opacity: .12;
+  }
+
+  60% {
+    opacity: .35;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1.18);
+    opacity: 0;
+  }
+}
+
+/* -----------------------------
+   Gradient Shift
+----------------------------- */
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* -----------------------------
+   Fade Up
+----------------------------- */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(45px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* -----------------------------
+   Rotate
+----------------------------- */
+
+@keyframes rotateSlow {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* -----------------------------
+   Button Shine
+----------------------------- */
+
+@keyframes shine {
+  from {
+    transform: translateX(-160%);
+  }
+
+  to {
+    transform: translateX(260%);
+  }
+}
+
+/* -----------------------------
+   Road Sweep
+----------------------------- */
+
+@keyframes roadLight {
+  0% {
+    transform: translateX(-160px);
+    opacity: 0;
+  }
+
+  15% {
+    opacity: .8;
+  }
+
+  85% {
+    opacity: .8;
+  }
+
+  100% {
+    transform: translateX(620px);
+    opacity: 0;
+  }
+}
+
+/* -----------------------------
+   Scroll Indicator
+----------------------------- */
+
+@keyframes scrollDot {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  70% {
+    transform: translateY(22px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(22px);
+    opacity: 0;
+  }
+}
+
+@keyframes scrollArrow {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: .45;
+  }
+
+  50% {
+    transform: translateY(6px);
+    opacity: 1;
+  }
+}
+
+/* =========================================================
+   Animation Utility Classes
+========================================================= */
+
+.animate-bus {
+  animation: busFloat 6s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-card-1 {
+  animation: cardFloatOne 7s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-card-2 {
+  animation: cardFloatTwo 9s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-card-3 {
+  animation: cardFloatThree 11s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-card-4 {
+  animation: cardFloatOne 8.5s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-glow {
+  animation: glowBreath 7s ease-in-out infinite;
+}
+
+.animate-radar {
+  animation: radarPulse 5s ease-out infinite;
+}
+
+.animate-gradient {
+  background-size: 300% 300%;
+  animation: gradientShift 9s ease infinite;
+}
+
+.animate-road-light {
+  animation: roadLight 3.8s linear infinite;
+}
+
+.animate-fade-up {
+  animation: fadeUp .9s var(--transition) forwards;
+}
+
+.animate-rotate-slow {
+  animation: rotateSlow 50s linear infinite;
+}
+
+.animate-scroll-dot {
+  animation: scrollDot 2s ease infinite;
+}
+
+.animate-scroll-arrow {
+  animation: scrollArrow 2s ease infinite;
+}
+
+/* =========================================================
+   Premium Surface System
+========================================================= */
+
+/* -----------------------------
+   Glass
+----------------------------- */
+
+.glass {
+  position: relative;
+
+  overflow: hidden;
+
+  background: linear-gradient(
+    180deg,
+    var(--glass-bg-strong),
+    var(--glass-bg)
+  );
+
+  border: 1px solid var(--glass-border);
+
+  backdrop-filter: blur(22px);
+
+  -webkit-backdrop-filter: blur(22px);
+
+  box-shadow:
+    var(--shadow-md),
+    inset 0 1px 1px rgba(255,255,255,.65);
+
+  isolation: isolate;
+}
+
+.glass::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,.22),
+    transparent
+  );
+
+  transform: translateX(-180%);
+
+  pointer-events: none;
+}
+
+.glass:hover::before {
+  animation: shine .9s ease;
+}
+
+/* -----------------------------
+   Glass Variants
+----------------------------- */
+
+.glass-dark {
+  background: rgba(15,23,42,.72);
+
+  border: 1px solid rgba(255,255,255,.08);
+
+  color: white;
+}
+
+.glass-pill {
+  border-radius: 999px;
+}
+
+.glass-card {
+  border-radius: var(--radius-lg);
+}
+
+/* =========================================================
+   Premium Cards
+========================================================= */
+
+.premium-card {
+  transform-style: preserve-3d;
+
+  will-change: transform;
+
+  transition:
+    transform .45s var(--transition),
+    box-shadow .45s ease,
+    border-color .45s ease,
+    background .45s ease;
+}
+
+.premium-card:hover {
+  transform:
+    translateY(-10px)
+    scale(1.02)
+    rotateX(4deg);
+
+  border-color: rgba(37,99,235,.22);
+
+  box-shadow:
+    var(--shadow-sm),
+    var(--shadow-lg);
+}
+
+/* =========================================================
+   Premium Buttons
+========================================================= */
+
+.btn-premium {
+  position: relative;
+
+  overflow: hidden;
+
+  isolation: isolate;
+
+  transition:
+    transform .35s var(--transition),
+    box-shadow .35s ease,
+    background .35s ease;
+}
+
+.btn-premium:hover {
+  transform:
+    translateY(-3px)
+    scale(1.03);
+}
+
+.btn-premium::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at top,
+      rgba(255,255,255,.18),
+      transparent 65%
+    );
+
+  opacity: 0;
+
+  transition: opacity .35s ease;
+
+  z-index: -1;
+}
+
+.btn-premium:hover::after {
+  opacity: 1;
+}
+
+/* =========================================================
+   Shadows
+========================================================= */
+
+.shadow-premium {
+  box-shadow: var(--shadow-lg);
+}
+
+.shadow-soft {
+  box-shadow: var(--shadow-sm);
+}
+
+.shadow-blue {
+  box-shadow:
+    0 30px 70px rgba(37,99,235,.16);
+}
+
+/* =========================================================
+   Text Utilities
+========================================================= */
+
+.text-gradient {
+  background: linear-gradient(
+    90deg,
+    var(--primary-dark),
+    var(--primary),
+    var(--primary-light)
+  );
+
+  background-size: 300% 300%;
+
+  -webkit-background-clip: text;
+
+  background-clip: text;
+
+  color: transparent;
+
+  animation: gradientShift 9s ease infinite;
+}
+
+/* =========================================================
+   Border Utilities
+========================================================= */
+
+.border-gradient {
+  position: relative;
+}
+
+.border-gradient::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  border-radius: inherit;
+
+  padding: 1px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(37,99,235,.45),
+    rgba(96,165,250,.18)
+  );
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+  -webkit-mask-composite: xor;
+
+  mask-composite: exclude;
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   Utilities
+========================================================= */
+
+/* -----------------------------
+   Image Rendering
+----------------------------- */
+
+img,
+picture,
+svg,
+canvas {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* -----------------------------
+   Text Gradient
+----------------------------- */
+
+.text-gradient {
+  background: linear-gradient(
+    90deg,
+    var(--primary-dark),
+    var(--primary),
+    var(--primary-light)
+  );
+
+  background-size: 300% 300%;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
+
+  animation: gradientShift 9s ease infinite;
+}
+
+/* -----------------------------
+   Hide Scrollbar
+----------------------------- */
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* -----------------------------
+   Blur Helpers
+----------------------------- */
+
+.blur-premium {
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+}
+
+.blur-heavy {
+  filter: blur(80px);
+}
+
+.blur-soft {
+  filter: blur(30px);
+}
+
+/* -----------------------------
+   Shadows
+----------------------------- */
+
+.shadow-premium {
+  box-shadow: var(--shadow-lg);
+}
+
+.shadow-soft {
+  box-shadow: var(--shadow-sm);
+}
+
+.shadow-blue {
+  box-shadow:
+    0 30px 70px rgba(37,99,235,.18);
+}
+
+/* -----------------------------
+   Border Helpers
+----------------------------- */
+
+.border-soft {
+  border: 1px solid rgba(255,255,255,.45);
+}
+
+.border-blue-soft {
+  border: 1px solid rgba(37,99,235,.18);
+}
+
+.rounded-premium {
+  border-radius: var(--radius-lg);
+}
+
+/* -----------------------------
+   Glass Helpers
+----------------------------- */
+
+.surface {
+  background: var(--glass-bg);
+}
+
+.surface-strong {
+  background: var(--glass-bg-strong);
+}
+
+/* =========================================================
+   Accessibility
+========================================================= */
+
+:focus-visible {
+  outline: 3px solid rgba(37,99,235,.35);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* =========================================================
+   Responsive Helpers
+========================================================= */
+
+@media (max-width: 1280px) {
+  :root {
+    --radius-lg: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --radius-lg: 20px;
+    --radius-md: 16px;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
 }
