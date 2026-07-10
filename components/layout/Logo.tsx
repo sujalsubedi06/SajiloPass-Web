@@ -11,7 +11,10 @@ export default function Logo({
   showText = true,
 }: LogoProps) {
   return (
-    <Link href="/" className="flex items-center gap-3">
+    <Link
+      href="#home"
+      className="flex items-center gap-3"
+    >
       <Image
         src="/logos/logo-mark.png"
         alt="YatraPass Logo"

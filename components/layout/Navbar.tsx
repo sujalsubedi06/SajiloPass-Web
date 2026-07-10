@@ -7,84 +7,137 @@ import { NAVIGATION } from "@/constants/navigation";
 
 export default function Navbar() {
   return (
-    <header className="fixed inset-x-0 top-0 z-50">
-      <Container className="py-4">
-        <div className="flex h-20 items-center justify-between rounded-2xl border border-white/40 bg-white/80 px-6 shadow-[0_10px_40px_rgba(15,23,42,0.08)] backdrop-blur-xl transition-all duration-300">
-
+    <header className="fixed inset-x-0 top-6 z-50">
+      <Container>
+        <div
+          className="
+            group
+            flex
+            h-[76px]
+            items-center
+            justify-between
+            rounded-[28px]
+            border
+            border-white/60
+            bg-white/72
+            px-10
+            xl:px-12
+            backdrop-blur-2xl
+            shadow-[0_20px_60px_rgba(15,23,42,0.10)]
+            transition-all
+            duration-500
+            hover:-translate-y-1
+            hover:shadow-[0_30px_80px_rgba(15,23,42,0.14)]
+          "
+        >
           {/* Logo */}
-          <Logo />
 
-          {/* Desktop Navigation */}
-          <nav className="hidden items-center gap-10 lg:flex">
+          <div
+            className="
+              transition-transform
+              duration-300
+              group-hover:scale-[1.02]
+            "
+          >
+            <Logo />
+          </div>
+
+          {/* Navigation */}
+
+          <nav className="hidden items-center gap-12 lg:flex">
             {NAVIGATION.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 className="
-                  group
+                  group/link
                   relative
-                  text-[15px]
+                  py-2
+                  text-base
                   font-medium
+                  tracking-tight
                   text-slate-600
-                  transition-colors
+                  transition-all
                   duration-300
-                  hover:text-blue-600
+                  hover:text-slate-900
                 "
               >
                 {item.label}
 
-                {/* Animated Underline */}
                 <span
                   className="
                     absolute
-                    -bottom-2
+                    bottom-0
                     left-1/2
                     h-[2px]
                     w-0
                     -translate-x-1/2
                     rounded-full
-                    bg-blue-600
+                    bg-gradient-to-r
+                    from-blue-500
+                    to-cyan-400
                     transition-all
                     duration-300
-                    group-hover:w-full
+                    group-hover/link:w-full
                   "
                 />
               </Link>
             ))}
           </nav>
 
-          {/* Right Side */}
-          <div className="relative z-50 flex items-center gap-4">
+          {/* Right */}
 
+          <div className="relative z-50 flex items-center gap-4">
             <Link
-              href="/download"
+              href="#cta"
               className="
+                group/button
+                relative
                 hidden
+                overflow-hidden
                 lg:inline-flex
                 items-center
-                rounded-xl
-                bg-blue-600
-                px-6
-                py-3
+                justify-center
+                rounded-2xl
+                bg-gradient-to-r
+                from-blue-600
+                to-blue-500
+                px-8
+                py-4
                 text-sm
                 font-semibold
                 text-white
                 shadow-lg
-                shadow-blue-600/20
+                shadow-blue-500/30
                 transition-all
                 duration-300
                 hover:-translate-y-1
-                hover:bg-blue-700
-                hover:shadow-xl
-                hover:shadow-blue-600/30
-                active:translate-y-0
+                hover:scale-[1.04]
+                hover:shadow-[0_20px_40px_rgba(37,99,235,.45)]
+                active:scale-95
               "
             >
-              Download App
+              <span
+                className="
+                  absolute
+                  inset-0
+                  -translate-x-full
+                  bg-gradient-to-r
+                  from-transparent
+                  via-white/30
+                  to-transparent
+                  transition-transform
+                  duration-700
+                  group-hover/button:translate-x-full
+                "
+              />
+
+              <span className="relative z-10">
+                🚀 Coming Soon
+              </span>
             </Link>
 
             <MobileMenu />
-
           </div>
         </div>
       </Container>

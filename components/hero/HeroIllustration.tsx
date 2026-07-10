@@ -44,7 +44,7 @@ export default function HeroIllustration() {
       <div
         className="
           absolute
-          bottom-[105px]
+          bottom-[58px]
           left-1/2
           -translate-x-1/2
           h-12
@@ -56,51 +56,74 @@ export default function HeroIllustration() {
         "
       />
 
-      {/* Road */}
-      <Image
-        src="/images/hero/hero-road.webp"
-        alt=""
-        width={1500}
-        height={350}
-        priority
-        draggable={false}
-        className="
-          pointer-events-none
-          absolute
-          bottom-6
-          left-1/2
-          z-30
-          w-[145%]
-          max-w-none
-          -translate-x-1/2
-          select-none
-        "
-      />
+{/* ================================================= */}
+{/* Scene */}
+{/* ================================================= */}
 
-      {/* Bus */}
-      <Image
-        src="/images/hero/hero-bus.webp"
-        alt="YatraPass Electric Bus"
-        width={1050}
-        height={1050}
-        priority
-        draggable={false}
-        className="
-          animate-float
-          pointer-events-none
-          relative
-          z-40
-          w-full
-          max-w-[860px]
-          -translate-y-4
-          drop-shadow-[0_60px_90px_rgba(37,99,235,.28)]
-          transition-all
-          duration-700
-          hover:scale-[1.02]
-          hover:-translate-y-5
-          select-none
-        "
-      />
+<div
+  className="
+    absolute
+    inset-0
+    flex
+    items-end
+    justify-center
+    -translate-y-30
+    lg:translate-x-20
+    xl:translate-x-26
+    2xl:translate-x-28
+    z-26
+  "
+>
+  {/* Road */}
+  <Image
+    src="/images/hero/hero-road.webp"
+    alt=""
+    width={1550}
+    height={450}
+    priority
+    draggable={false}
+    className="
+      pointer-events-none
+      absolute
+      bottom-0
+      left-1/2
+      w-[200%]
+      max-w-none
+      -translate-x-1/2
+      select-none
+    "
+  />
+
+  {/* Bus */}
+  <Image
+    src="/images/hero/hero-bus.webp"
+    alt="YatraPass Electric Bus"
+    width={1550}
+    height={1550}
+    priority
+    draggable={false}
+    className="
+      animate-float
+      pointer-events-none
+      relative
+      z-36
+
+      mb-[52px]
+
+      w-full
+      max-w-[1460px]
+
+      drop-shadow-[0_60px_90px_rgba(37,99,235,.28)]
+
+      transition-all
+      duration-700
+
+      hover:scale-[1.02]
+
+      select-none
+    "
+  />
+</div>
 
       {/* Glass Reflection */}
       <div

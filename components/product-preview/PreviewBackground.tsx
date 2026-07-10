@@ -1,15 +1,20 @@
 export default function PreviewBackground() {
   return (
     <div className="pointer-events-none absolute inset-0 overflow-hidden">
-      {/* Base Gradient */}
+      {/* Large Center Glow */}
       <div
         className="
+          animate-glow
           absolute
-          inset-0
-          bg-gradient-to-b
-          from-white
-          via-slate-50
-          to-white
+          left-1/2
+          top-1/2
+          h-[900px]
+          w-[900px]
+          -translate-x-1/2
+          -translate-y-1/2
+          rounded-full
+          bg-blue-500/10
+          blur-[180px]
         "
       />
 
@@ -18,13 +23,13 @@ export default function PreviewBackground() {
         className="
           animate-glow
           absolute
-          -left-52
+          -left-56
           top-0
-          h-[520px]
-          w-[520px]
+          h-[550px]
+          w-[550px]
           rounded-full
-          bg-blue-500/10
-          blur-[150px]
+          bg-sky-400/15
+          blur-[160px]
         "
       />
 
@@ -34,12 +39,27 @@ export default function PreviewBackground() {
           animate-glow
           absolute
           right-[-220px]
-          top-10
+          top-12
           h-[600px]
           w-[600px]
           rounded-full
-          bg-cyan-400/10
+          bg-cyan-400/15
           blur-[180px]
+        "
+      />
+
+      {/* Bottom Left Glow */}
+      <div
+        className="
+          animate-float-reverse
+          absolute
+          bottom-[-180px]
+          left-[-180px]
+          h-[450px]
+          w-[450px]
+          rounded-full
+          bg-blue-400/15
+          blur-[150px]
         "
       />
 
@@ -48,14 +68,14 @@ export default function PreviewBackground() {
         className="
           animate-glow
           absolute
-          bottom-[-220px]
+          bottom-[-250px]
           left-1/2
-          h-[700px]
-          w-[700px]
+          h-[750px]
+          w-[750px]
           -translate-x-1/2
           rounded-full
-          bg-blue-400/10
-          blur-[200px]
+          bg-blue-500/10
+          blur-[220px]
         "
       />
 
@@ -64,35 +84,9 @@ export default function PreviewBackground() {
         className="
           absolute
           inset-0
-          opacity-[0.03]
+          opacity-[0.035]
           [background-image:linear-gradient(to_right,#2563eb_1px,transparent_1px),linear-gradient(to_bottom,#2563eb_1px,transparent_1px)]
           [background-size:64px_64px]
-        "
-      />
-
-      {/* Top Fade */}
-      <div
-        className="
-          absolute
-          inset-x-0
-          top-0
-          h-48
-          bg-gradient-to-b
-          from-white
-          to-transparent
-        "
-      />
-
-      {/* Bottom Fade */}
-      <div
-        className="
-          absolute
-          inset-x-0
-          bottom-0
-          h-48
-          bg-gradient-to-t
-          from-white
-          to-transparent
         "
       />
     </div>

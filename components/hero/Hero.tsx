@@ -6,7 +6,7 @@ import MouseGlow from "./MouseGlow";
 
 export default function Hero() {
   return (
-    <section className="relative isolate flex min-h-screen items-center overflow-hidden">
+    <section className="relative isolate flex min-h-screen items-center overflow-hidden" id="home">
       {/* Background */}
       <HeroBackground />
 

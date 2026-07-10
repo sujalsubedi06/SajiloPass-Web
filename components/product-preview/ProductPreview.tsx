@@ -6,7 +6,7 @@ import PreviewCards from "./PreviewCards";
 
 export default function ProductPreview() {
   return (
-    <section className="relative overflow-hidden py-32">
+    <section className="relative overflow-hidden py-32" id="product-preview">
       {/* Background */}
       <PreviewBackground />
 

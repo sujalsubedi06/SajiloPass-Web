@@ -4,7 +4,6 @@ import FloatingCards from "./FloatingCards";
 import HeroGlow from "./HeroGlow";
 import HeroIllustration from "./HeroIllustration";
 import HeroRadar from "./HeroRadar";
-import HeroStats from "./HeroStats";
 import MouseGlow from "./MouseGlow";
 
 export default function HeroScene() {
@@ -23,14 +22,10 @@ export default function HeroScene() {
       <HeroIllustration />
 
       {/* Floating UI Cards */}
-      <div className="pointer-events-none absolute inset-0 z-40">
+      <div className="absolute inset-0 z-40">
         <FloatingCards />
       </div>
 
-      {/* Floating Stats */}
-      <div className="absolute inset-0 z-50">
-        <HeroStats />
-      </div>
     </div>
   );
 }

@@ -4,15 +4,15 @@ import Hero from "@/components/hero/Hero";
 
 import ProductPreview from "@/components/product-preview/ProductPreview";
 
-// Future Sections
-// import Features from "@/components/features/Features";
-// import HowItWorks from "@/components/how-it-works/HowItWorks";
-// import WhyYatraPass from "@/components/why-yatrapass/WhyYatraPass";
-// import MobileShowcase from "@/components/mobile-showcase/MobileShowcase";
-// import Roadmap from "@/components/roadmap/Roadmap";
-// import FAQ from "@/components/faq/FAQ";
-// import CTA from "@/components/cta/CTA";
-// import Footer from "@/components/layout/Footer";
+import Features from "@/components/features/Features";
+
+import HowItWorks from "@/components/how-it-works/HowItWorks";
+
+import FAQ from "@/components/faq/FAQ";
+
+import CTA from "@/components/cta/CTA";
+
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
@@ -24,21 +24,15 @@ export default function Home() {
 
         <ProductPreview />
 
-        {/* <Features /> */}
+        <Features />
 
-        {/* <HowItWorks /> */}
+        <HowItWorks />
 
-        {/* <WhyYatraPass /> */}
+        <FAQ /> 
 
-        {/* <MobileShowcase /> */}
+        <CTA />
 
-        {/* <Roadmap /> */}
-
-        {/* <FAQ /> */}
-
-        {/* <CTA /> */}
-
-        {/* <Footer /> */}
+        <Footer />
       </main>
     </>
   );
