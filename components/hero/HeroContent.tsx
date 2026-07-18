@@ -112,7 +112,7 @@ export default function HeroContent() {
           text-slate-600
         "
       >
-        YatraPass is building Nepal's next-generation mobility platform for
+        SajiloPass is building Nepal's next-generation mobility platform for
         seamless travel inside the Kathmandu Valley. Buy digital bus passes,
         scan QR tickets, and enjoy faster, smarter public transportation from
         one beautifully designed app.

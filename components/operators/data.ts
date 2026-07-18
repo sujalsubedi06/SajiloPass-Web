@@ -17,7 +17,7 @@ export const operatorFeatures: OperatorFeature[] = [
   {
     title: "Automatic Fare Collection",
     description:
-      "Eliminate cash handling and collect fares securely through YatraPass.",
+      "Eliminate cash handling and collect fares securely through SajiloPass.",
     icon: Wallet,
   },
   {

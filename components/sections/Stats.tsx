@@ -9,7 +9,7 @@ export default function Stats() {
 
         <div className="mx-auto mb-16 max-w-3xl text-center">
           <span className="rounded-full bg-blue-100 px-4 py-2 text-sm font-semibold text-blue-700">
-            Why YatraPass?
+            Why SajiloPass?
           </span>
 
           <h2 className="mt-6 text-4xl font-black tracking-tight text-slate-900 md:text-5xl">

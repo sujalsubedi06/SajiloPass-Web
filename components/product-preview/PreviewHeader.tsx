@@ -52,7 +52,7 @@ export default function PreviewHeader() {
           md:text-xl
         "
       >
-        YatraPass brings ticketing, digital bus passes, live route tracking,
+        SajiloPass brings ticketing, digital bus passes, live route tracking,
         and secure payments together into one beautifully designed mobile
         experience for everyday travel inside Kathmandu Valley.
       </p>

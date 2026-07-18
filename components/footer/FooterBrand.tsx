@@ -67,7 +67,7 @@ export default function FooterBrand() {
           text-slate-600
         "
       >
-        YatraPass helps passengers travel cashlessly while giving
+        SajiloPass helps passengers travel cashlessly while giving
         operators powerful tools to manage fleets, routes and
         payments through one intelligent platform.
       </p>
@@ -100,7 +100,7 @@ export default function FooterBrand() {
         </Link>
 
         <Link
-          href="mailto:hello@yatrapass.com"
+          href="mailto:hello@SajiloPass.com"
           className="
             inline-flex
             items-center

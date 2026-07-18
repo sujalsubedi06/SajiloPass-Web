@@ -17,7 +17,7 @@ export default function Logo({
     >
       <Image
         src="/logos/logo-mark.png"
-        alt="YatraPass Logo"
+        alt="SajiloPass Logo"
         width={size}
         height={size}
         priority
@@ -27,7 +27,7 @@ export default function Logo({
       {showText && (
         <div>
           <h1 className="text-xl font-bold text-slate-900">
-            YatraPass
+            SajiloPass
           </h1>
 
           <p className="text-sm text-slate-500">

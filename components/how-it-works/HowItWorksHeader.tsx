@@ -75,7 +75,7 @@ export default function HowItWorksHeader() {
       >
         From scanning a QR code to receiving your digital receipt,
         <span className="font-semibold text-slate-900">
-          {" "}YatraPass{" "}
+          {" "}SajiloPass{" "}
         </span>
         automates your entire public transport journey inside Kathmandu Valley.
         No cash. No paper tickets. Just board, travel, and arrive.

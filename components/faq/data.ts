@@ -5,9 +5,9 @@ export interface FAQ {
 
 export const faqs: FAQ[] = [
   {
-    question: "How does YatraPass calculate my fare?",
+    question: "How does SajiloPass calculate my fare?",
     answer:
-      "YatraPass securely compares your journey with the bus's live GPS route to calculate the exact fare based on the distance travelled.",
+      "SajiloPass securely compares your journey with the bus's live GPS route to calculate the exact fare based on the distance travelled.",
   },
   {
     question: "Do I need internet while travelling?",
@@ -22,12 +22,12 @@ export const faqs: FAQ[] = [
   {
     question: "What happens if my phone battery dies?",
     answer:
-      "If your phone powers off during a trip, YatraPass safely preserves your latest journey data and helps complete the trip once you're back online.",
+      "If your phone powers off during a trip, SajiloPass safely preserves your latest journey data and helps complete the trip once you're back online.",
   },
   {
     question: "Which payment methods are supported?",
     answer:
-      "YatraPass supports secure digital wallets and additional payment options that will continue expanding as the platform grows.",
+      "SajiloPass supports secure digital wallets and additional payment options that will continue expanding as the platform grows.",
   },
   {
     question: "Will I receive a receipt?",

@@ -44,7 +44,7 @@ export const journeySteps: JourneyStep[] = [
     number: "02",
     title: "Journey Detection",
     description:
-      "YatraPass securely compares your live location with the bus GPS to detect your journey automatically.",
+      "SajiloPass securely compares your live location with the bus GPS to detect your journey automatically.",
 
     icon: MapPinned,
     side: "left",
@@ -78,7 +78,7 @@ export const journeySteps: JourneyStep[] = [
     number: "04",
     title: "Leave the Bus",
     description:
-      "Once your location no longer matches the bus route, YatraPass automatically detects that your journey has ended.",
+      "Once your location no longer matches the bus route, SajiloPass automatically detects that your journey has ended.",
 
     icon: LogOut,
     side: "right",

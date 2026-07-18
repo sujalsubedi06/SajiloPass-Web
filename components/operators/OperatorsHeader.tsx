@@ -75,7 +75,7 @@ export default function OperatorsHeader() {
           text-slate-600
         "
       >
-        YatraPass helps transport operators automate fare collection,
+        SajiloPass helps transport operators automate fare collection,
         monitor fleets in real time, reduce operational costs, and gain
         valuable insights from every journey—all through one intelligent
         platform.

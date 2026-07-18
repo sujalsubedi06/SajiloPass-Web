@@ -74,7 +74,7 @@ export default function FAQHeader() {
           text-slate-600
         "
       >
-        Find answers to the most common questions about YatraPass,
+        Find answers to the most common questions about SajiloPass,
         including journey detection, payments, privacy, and how the
         platform makes public transport simpler and smarter.
       </p>

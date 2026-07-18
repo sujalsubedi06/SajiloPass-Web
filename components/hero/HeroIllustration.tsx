@@ -97,7 +97,7 @@ export default function HeroIllustration() {
   {/* Bus */}
   <Image
     src="/images/hero/hero-bus.webp"
-    alt="YatraPass Electric Bus"
+    alt="SajiloPass Electric Bus"
     width={1550}
     height={1550}
     priority

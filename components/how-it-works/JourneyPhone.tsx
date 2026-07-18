@@ -64,7 +64,7 @@ export default function JourneyPhone({
           {/* App Header */}
           <div className="border-b border-slate-100 px-7 py-5">
             <h2 className="text-2xl font-bold text-blue-600">
-              YatraPass
+              SajiloPass
             </h2>
           </div>
 

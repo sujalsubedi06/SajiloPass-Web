@@ -25,7 +25,7 @@ export default function FooterBottom() {
       >
         © {new Date().getFullYear()}{" "}
         <span className="font-semibold text-slate-700">
-          YatraPass
+          SajiloPass
         </span>
         . All rights reserved.
       </p>

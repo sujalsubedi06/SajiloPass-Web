@@ -20,7 +20,7 @@ export default function FeaturesHeader() {
 
       {/* Description */}
       <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-        YatraPass combines digital ticketing, live tracking, secure payments,
+        SajiloPass combines digital ticketing, live tracking, secure payments,
         and smart route planning into one seamless experience for passengers
         and operators.
       </p>

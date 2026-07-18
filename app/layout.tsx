@@ -15,9 +15,9 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "YatraPass",
+  title: "SajiloPass",
   description: "🇳🇵 Nepal's Smart Mobility Platform (Under Development)",
-  applicationName: "YatraPass",
+  applicationName: "SajiloPass",
   keywords: [
     "Nepal",
     "Bus",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     "Transit",
     "QR Ticket",
     "Digital Pass",
-    "YatraPass",
+    "SajiloPass",
   ],
 };
 

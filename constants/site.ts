@@ -1,7 +1,7 @@
 export const SITE = {
-  name: "YatraPass",
+  name: "SajiloPass",
 
-  shortName: "YatraPass",
+  shortName: "SajiloPass",
 
   tagline: "🇳🇵 Nepal's Smart Mobility Platform",
 
@@ -12,9 +12,9 @@ export const SITE = {
   description:
     "Modern cashless mobility platform for Nepal with QR tickets, digital bus passes and seamless travel.",
 
-  website: "https://yatrapass.com",
+  website: "https://SajiloPass.com",
 
-  email: "hello@yatrapass.com",
+  email: "hello@SajiloPass.com",
 
   copyright: `© ${new Date().getFullYear()} Yatra Tech Pvt. Ltd.`,
 } as const;

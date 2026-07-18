@@ -117,7 +117,7 @@ export default function CTAContent() {
         "
       >
         Experience a faster, cashless, and GPS-powered way to travel.
-        YatraPass is redefining public transportation with seamless
+        SajiloPass is redefining public transportation with seamless
         fare collection and a smarter commuting experience.
       </p>
 

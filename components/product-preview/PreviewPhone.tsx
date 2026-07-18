@@ -92,7 +92,7 @@ export default function PreviewPhone() {
             </p>
 
             <h3 className="mt-2 text-2xl font-bold">
-              YatraPass
+              SajiloPass
             </h3>
 
             <div
